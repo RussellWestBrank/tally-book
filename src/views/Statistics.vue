@@ -1,10 +1,16 @@
 <template>
-  <div>statistics</div>
+  <div>statistics
+    <Nav/>
+  </div>
+
 </template>
 
 <script>
+  import Nav from "@/components/Nav"
+
   export default {
-    name: "Statistics"
+    name: "Statistics",
+    components: {Nav}
   }
 </script>
 
