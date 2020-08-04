@@ -1,7 +1,7 @@
 <template>
-  <div>statistics
-    <Nav/>
-  </div>
+  <Layout>
+    statistics
+  </Layout>
 
 </template>
 
@@ -10,6 +10,7 @@
 
   export default {
     name: "Statistics",
+    // eslint-disable-next-line vue/no-unused-components
     components: {Nav}
   }
 </script>
