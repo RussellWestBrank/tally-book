@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    labels
+    <p>labels</p>
   </Layout>
 
 </template>
