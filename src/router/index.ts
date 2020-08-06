@@ -1,24 +1,23 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-import  Money from '@/views/Money.vue'
-import  Lables from '@/views/Lables.vue'
-import  Statistics from '@/views/Statistics.vue'
-import   NotFound from '@/views/NotFound.vue'
+import Money from "@/views/Money.vue";
+import Labels from "@/views/Labels.vue";
+import Statistics from "@/views/Statistics.vue";
+import NotFound from "@/views/NotFound.vue";
 Vue.use(VueRouter);
-
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
-    redirect: '/money',
+    redirect: "/money",
   },
   {
     path: "/money",
     component: Money,
   },
   {
-    path: "/lables",
-    component: Lables,
+    path: "/labels",
+    component: Labels,
   },
   {
     path: "/statistics",
@@ -28,7 +27,6 @@ const routes: Array<RouteConfig> = [
     path: "*",
     component: NotFound,
   },
-
 ];
 
 const router = new VueRouter({

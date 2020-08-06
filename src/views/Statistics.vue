@@ -4,7 +4,6 @@
   </Layout>
 
 </template>
-
 <script>
   import Nav from "@/components/Nav"
 
