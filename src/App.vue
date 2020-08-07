@@ -1,7 +1,7 @@
-<template>
-  <div>
-    <router-view/>
 
+<template>
+  <div id="app">
+    <router-view/>
   </div>
 </template>
 
@@ -11,10 +11,9 @@
   body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-family: $font-hei;
     color: #333;
+    font-family: $font-hei;
+    font-size: 16px;
     line-height: 1.5;
   }
-
-
 </style>
