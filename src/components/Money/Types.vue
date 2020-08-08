@@ -22,7 +22,7 @@
       console.log(this.xxx)
     },
     methods: {
-      selectType(type) {
+      selectType(type) { //type 只能是+或-中的一个
         if (type !== '-' && type !== '+') {
           throw new Error ('type is unknown')
         }
