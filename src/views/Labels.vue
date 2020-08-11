@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    {{tags}}
     <div class="tags">
       <router-link class="tag"
                    v-for="tag in tags" :key="tag.id"
