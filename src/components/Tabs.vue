@@ -1,11 +1,9 @@
 <template>
   <div>
-    <ul class="types">
-      <li :class="{[classPrefix+'-item']: classPrefix, selected: value==='-'}"
-          @click="selectType('-')">支出
-      </li>
-      <li :class = "{selected:value==='+',[classPrefix+'-tabs-item']:classPrefix}"
-          @click=" selectType('+') ">收入</li>
+    <ul class="tabs">
+     <li v-for="item in dataSource" :key="item.value"
+         :class="{selected:item.value===value,[classPrefix+'-tabs-item']: classPrefix}"
+     @click="select(item)">{{item.text}}</li>
     </ul>
   </div>
 </template>
@@ -14,7 +12,8 @@
   import Vue from 'vue';
   import {Component, Prop} from 'vue-property-decorator';
   @Component //修饰器，自动将type加入data，selectType加入methods
-  export default class Types extends Vue {
+  export default class Tabs extends Vue {
+    @Prop({required:true,type:Array}) dataSource!: {text: string; value: string}[];
     @Prop() readonly value!: string;
     @Prop(String) classPrefix?: string;
 
@@ -25,13 +24,16 @@
       this.$emit('update:value',type)
 
     }
+    select(item: {text: string; value: string}){
+      this.$emit('update:value',item.value)
+    }
   }
 
 
 </script>
 
 <style lang="scss" scoped>
-  .types {
+  .tabs {
     background: #c4c4c4;
     display: flex;
     text-align: center;
