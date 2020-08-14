@@ -6,10 +6,10 @@
     <div class="notes">
       <FormItem field-name="备注"
                 placeholder="在这里输入备注"
-                @update:value="onUpdateNotes"
+                :value.sync = "record.notes"
       />
     </div>
-    <Tags/>
+    <Tags  @update:value = "record.tags = $event"/>
   </Layout>
 </template>
 
@@ -40,6 +40,7 @@
     }
     saveRecord() {
       this.$store.commit('createRecord', this.record);
+      this.record.notes = ''
     }
   }
 </script>
