@@ -17,4 +17,10 @@
     line-height: 1.5;
     background: #f5f5f5;
   }
+  @media (min-width:500px){
+    #app {
+      max-width:500px;
+      margin:0 auto
+    }
+  }
 </style>
